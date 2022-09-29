@@ -14,7 +14,7 @@ class Settings():
         self.laser_color = 255, 0, 0
         self.lasers_every = 10           # change to 1 to see faster lasers
 
-        self.aliens_shoot_every = 120    # about every 2 seconds at 60 fps
+        self.aliens_shoot_every = 275    # about every 2 seconds at 60 fps
         self.alien_points = 50
 
 # # TODO: set a ship_limit of 3

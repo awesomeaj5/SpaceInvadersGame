@@ -14,13 +14,14 @@ class Alien(Sprite):
 
     # alien_images = [pg.image.load(f'images/alien{n}.bmp') for n in range(2)]
 
-    # alien_images0 = [pg.image.load(f'images/alien0{n}.bmp') for n in range(2)]
-    # alien_images1 = [pg.image.load(f'images/alien1{n}.bmp') for n in range(2)]
-    # alien_images2 = [pg.image.load(f'images/alien2{n}.bmp') for n in range(2)]
-
-    alien_images0 = [pg.transform.rotozoom(pg.image.load(f'images/alien__0{n}.png'), 0, 0.7) for n in range(2)]
-    alien_images1 = [pg.transform.rotozoom(pg.image.load(f'images/alien__1{n}.png'), 0, 0.7) for n in range(2)]
-    alien_images2 = [pg.transform.rotozoom(pg.image.load(f'images/alien__2{n}.png'), 0, 0.7) for n in range(2)]
+    alien_images0 = [pg.image.load(f'images/alien0{n}.bmp') for n in range(2)]
+    alien_images1 = [pg.image.load(f'images/alien1{n}.bmp') for n in range(2)]
+    alien_images2 = [pg.image.load(f'images/alien2{n}.bmp') for n in range(2)]
+    #alien_images3 = [pg.image.load(f'images/alien3{n}.bmp') for n in range(2)]
+    #
+    # alien_images0 = [pg.transform.rotozoom(pg.image.load(f'images/alien__0{n}.png'), 0, 0.7) for n in range(2)]
+    # alien_images1 = [pg.transform.rotozoom(pg.image.load(f'images/alien__1{n}.png'), 0, 0.7) for n in range(2)]
+    # alien_images2 = [pg.transform.rotozoom(pg.image.load(f'images/alien__2{n}.png'), 0, 0.7) for n in range(2)]
 
     # alien_images3 = [pg.image.load(f'images/alien3{n}.bmp') for n in range(2)]
 
@@ -169,6 +170,8 @@ class Aliens:
             for alien in collisions:
                 alien.hit()
             self.sb.increment_score()
+
+
     def update(self): 
         self.check_fleet_edges()
         self.check_fleet_bottom()
