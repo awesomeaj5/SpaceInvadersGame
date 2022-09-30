@@ -23,6 +23,8 @@ class Ship(Sprite):
         # self.lasers = Lasers(settings=self.settings)
         self.lasers = game.ship_lasers
 
+        self.alien_lasers = game.alien_lasers
+
         # self.lasers = lasers
         self.shooting = False
         self.lasers_attempted = 0
@@ -42,6 +44,8 @@ class Ship(Sprite):
         self.ships_left -= 1
         print(f'Ship is dead! Only {self.ships_left} ships left')
         self.game.reset() if self.ships_left > 0 else self.game.game_over()
+            
+
     def update(self):
         self.posn += self.vel
         self.posn, self.rect = clamp(self.posn, self.rect, self.settings)

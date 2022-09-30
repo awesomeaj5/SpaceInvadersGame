@@ -171,6 +171,10 @@ class Aliens:
                 alien.hit()
             self.sb.increment_score()
 
+    def check_ship_collision(self):
+        collisions = pg.sprite.spritecollide(self.ship, self.aliens_lasers.lasers, True)
+        if collisions:
+            self.ship.die()
 
     def update(self): 
         self.check_fleet_edges()
@@ -178,6 +182,7 @@ class Aliens:
         self.check_collisions()
         self.check_fleet_empty()
         self.shoot_from_random_alien()
+        self.check_ship_collision()
         for alien in self.aliens.sprites():
             if alien.dead:      # set True once the explosion animation has completed
                 alien.remove()
