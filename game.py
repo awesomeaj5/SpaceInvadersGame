@@ -37,6 +37,7 @@ class Game:
         self.ship.reset()
         self.aliens.reset()
         # self.scoreboard.reset()
+        # Changing this to upload again on github
 
     def game_over(self):
         print('All ships gone: game over!')
