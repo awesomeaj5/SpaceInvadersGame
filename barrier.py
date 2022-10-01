@@ -18,6 +18,7 @@ class Barrier(Sprite):
         # self.x = float(self.rect.x)
         
     def hit(self): pass
+    
     def update(self): self.draw()
     def draw(self): 
         pg.draw.rect(self.screen, Barrier.color, self.rect, 0, 20)
