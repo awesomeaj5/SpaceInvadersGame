@@ -1,5 +1,11 @@
+# Stephanie Becerra , ID: 888771284
+#A.J. Ort, 889672416
+
 class Settings():
     """A class to store all settings for Alien Invasion."""
+    alien_points= {0 : 10, 
+                   1 : 30, 
+                   2 : 50} 
 
     def __init__(self):
         """Initialize the game's settings."""
@@ -15,7 +21,7 @@ class Settings():
         self.lasers_every = 10           # change to 1 to see faster lasers
 
         self.aliens_shoot_every = 275    # about every 2 seconds at 60 fps
-        self.alien_points = 50
+        self.alien_points = self.alien_points[0]
         self.max_barrier_hits = 10
 
 # # TODO: set a ship_limit of 3
@@ -34,3 +40,6 @@ class Settings():
         scale = self.speedup_scale
         self.ship_speed_factor *= scale
         self.laser_speed_factor *= scale
+
+    def alien_point(self, type):
+        self.alien_points = self.alien_points[type]

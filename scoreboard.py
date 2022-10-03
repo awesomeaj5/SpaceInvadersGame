@@ -1,4 +1,7 @@
-import pygame as pg 
+# Stephanie Becerra , ID: 888771284
+#A.J. Ort, 889672416
+
+import pygame as pg
 # import pygame.font
 
 class Scoreboard:

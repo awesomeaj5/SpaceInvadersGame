@@ -1,3 +1,6 @@
+# Stephanie Becerra , ID: 888771284
+#A.J. Ort, 889672416
+
 class Testing:
     '''Simple Testing class to put a banner around your Classes.run_test() method
        Just create your testing instance at the beginning of your run_tests() method

@@ -1,3 +1,6 @@
+# Stephanie Becerra , ID: 888771284
+#A.J. Ort, 889672416
+
 import sys
 import pygame as pg
 from vector import Vector

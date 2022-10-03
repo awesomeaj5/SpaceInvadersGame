@@ -1,3 +1,6 @@
+# Stephanie Becerra , ID: 888771284
+#A.J. Ort, 889672416
+
 from random import randint
 from tokenize import group
 import pygame as pg
