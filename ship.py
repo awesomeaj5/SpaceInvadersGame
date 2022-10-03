@@ -80,5 +80,6 @@ class Ship(Sprite):
             if self.timer_explosion.is_expired():
                 self.dieing = False 
                 self.timer_explosion.reset()
+                
         else:
             self.screen.blit(self.image,self.rect)

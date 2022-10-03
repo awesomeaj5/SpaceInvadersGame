@@ -5,6 +5,7 @@ import pygame as pg
 from pygame.sprite import Sprite, Group
 from laser import Lasers
 from timer import Timer
+from barrier import Barriers
 
 
 class Alien(Sprite):
@@ -94,6 +95,7 @@ class Aliens:
         self.settings = game.settings
         self.shoot_requests = 0
         self.ship = game.ship
+        self.barriers = game.barriers
         self.create_fleet()
     def get_number_aliens_x(self, alien_width):
         available_space_x = self.settings.screen_width - 6 * alien_width
@@ -175,6 +177,9 @@ class Aliens:
         collisions = pg.sprite.spritecollide(self.ship, self.aliens_lasers.lasers, True)
         if collisions:
             self.ship.die()
+    
+   
+
 
     def update(self): 
         self.check_fleet_edges()
@@ -183,6 +188,7 @@ class Aliens:
         self.check_fleet_empty()
         self.shoot_from_random_alien()
         self.check_ship_collision()
+        
         for alien in self.aliens.sprites():
             if alien.dead:      # set True once the explosion animation has completed
                 alien.remove()
