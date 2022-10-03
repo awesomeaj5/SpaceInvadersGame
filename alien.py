@@ -112,7 +112,11 @@ class Aliens:
         self.aliens_lasers.reset()
     def create_alien(self, alien_number, row_number):
         # if row_number > 5: raise ValueError('row number must be less than 6')
-        type = row_number // 2     
+        type = row_number // 2 
+        #different score stuff here
+        if type == 0:
+            #change this for score
+            self.aliens    
         alien = Alien(game=self.game, type=type)
         alien_width = alien.rect.width
 

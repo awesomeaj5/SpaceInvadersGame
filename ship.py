@@ -8,7 +8,7 @@ from timer import Timer
 
 class Ship(Sprite):
 
-    ship_explosion_images = [pg.image.load(f'images/explode{n}.png') for n in range(7)]
+    ship_explosion_images = [pg.image.load(f'images/frame_{n}.png') for n in range(15)]
 
 
     def __init__(self, game):
