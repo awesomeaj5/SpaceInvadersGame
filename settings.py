@@ -16,6 +16,7 @@ class Settings():
 
         self.aliens_shoot_every = 275    # about every 2 seconds at 60 fps
         self.alien_points = 50
+        self.max_barrier_hits = 10
 
 # # TODO: set a ship_limit of 3
         self.ship_limit = 3         # total ships allowed in game before game over
